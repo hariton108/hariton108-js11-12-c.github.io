@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<script type="text/template" id="cv-template">
+		<div class="background">
+			<div class="container">
+				<div class="name">
+					<h1><%= name %></h1>
+				</div>
+				<div class="photo">
+					<img src="<%= photo %>" alt="" title="">
+				</div>
+				<div class="description"><%= description %>
+				</div>
+				<div class="reasons">
+					<h2>Хочу учить фронтенд, потому что:</h2>
+					<ul>
+					<% for ( var i = 0; i < reasons.length; i++ ) { %>
+						<li><%= reasons[i] %></li>
+					<% } %>
+					</ul>
+				</div>
+				<div class="contacts">
+					<h2>Мой контактный телефон:</h2>
+					<p><%= phone %></p>
+					<h2>Мой профиль Вконтакте:</h2>
+					<a href="<%= vk %>" target="_blank">vk.com</a>
+				</div>
+				<div class="feedback">
+					<h2>Мой фидбек:</h2>
+					<p><%= feedback %></p>
+				</div>
+			</div>
+		</div>
+	</script>
+</body>
+</html>
